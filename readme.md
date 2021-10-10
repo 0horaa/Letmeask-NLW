@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img alt="Logo do Letmeask" title="Logo do Letmeask" src="./src/assets/logo.svg">
+	<img alt="Logo do Letmeask" title="Logo do Letmeask" src="./src/assets/images/logo.svg">
 </h1>
 <p align="center">
 	<img src="./src/img/react-img.png">
