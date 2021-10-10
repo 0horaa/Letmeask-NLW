@@ -1,0 +1,143 @@
+#page-auth{
+    display:flex;
+    align-items:stretch;
+    height:100vh;
+
+    aside{
+        flex:7;
+
+        background-color:#835afd;
+        color:#fff;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+
+        padding:120px 80px;
+
+        img{
+            max-width:320px; /*ou seja, a imagem nunca vai passar dessa largura*/
+        }
+
+        strong{
+            font:700 36px "Poppins", sans-serif;
+            line-height:42px;
+            margin-top:16px;
+        }
+
+        p{
+            font-size:24px;
+            line-height:32px;
+            margin-top:16px;
+            color:#f8f8f8;
+        }
+    }
+
+    main{
+        flex:8; /*ou seja, ocupa uma unidade flexível a mais do que o aside*/
+
+        padding:0 32px; /*32px de padding nas laterais pra evitar grudar nas bordas*/
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .main-content{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        max-width:320px;
+        align-items:stretch; /*estica todos os elementos pra caberem na largura máxima*/
+        text-align:center;
+        
+        > img{ /*o > serve pra pegar somente a img dentro de .main-content*/
+            align-self:center; /*aplica um novo align na imagem pra que ela não estique como os demais
+            elementos*/
+        }
+
+        h2{
+            font-size:24px;
+            font-family:"Poppins", sans-serif;
+            margin:64px 0 24px;  /*64px em cima, 0 dos lados e 24px em baixo*/
+        }
+
+        form{
+            input{
+                height:50px;
+                border:1px solid #a8a8b3;
+                border-radius:8px;
+                padding:0 16px;
+                background:#fff;
+            }
+
+            button{
+                margin-top:16px;
+            }
+
+            button, input{
+                width:100%; //força a largura total dos elementos pra ficarem um abaixo do outro
+            }
+        }
+
+        p{
+            font-size:14px;
+            color:#737380;
+            margin-top:16px;
+
+            a{
+                color:#e559f9
+            }
+        }
+    }
+
+    .create-room{
+        margin-top:64px;
+        height:50px;
+        border:0;
+        border-radius:8px;
+        font-weight:500;
+        background-color:#ea4335;
+        color:#fff;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        cursor:pointer;
+        transition:filter 0.2s;
+
+        > img{
+            margin-right:8px;
+        }
+
+        &:hover{
+            filter:brightness(0.9); /*diminui o brilho do botão em 10%*/
+        }
+    }
+
+    .separator{
+        font-size:14px;
+        color:#a8a8b3;
+
+        margin:32px 0;
+        display:flex;
+        align-items:center;
+
+        &::before{ /*serve pra criar as linhas antes dessa tag*/
+            content:""; /*sempre precisa existir, senão nada será exibido*/
+            flex:1;
+            height:1px;
+            background:#a8a8b3;
+            margin-right:16px;
+        }
+
+        &::after{
+            content:"";
+            flex:1; /*ocupa todo o espaço disponível*/
+            height:1px;
+            background:#a8a8b3;
+            margin-left:16px;
+        }
+    }
+}
